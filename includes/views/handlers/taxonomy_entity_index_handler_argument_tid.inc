@@ -69,7 +69,6 @@ class taxonomy_entity_index_handler_argument_tid extends views_handler_argument_
      */
 
     $subquery->condition($where);
-    dsm($subquery->__toString());
 
     $this->query->add_where(0, "$this->table_alias.$this->real_field", $subquery, 'IN');
   }
